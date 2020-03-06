@@ -65,7 +65,7 @@ void loop()
   for (pos2 = servo2.read(); pos2 >= 84; pos2 -= 1) { 
     servo2.write(pos2);              
     delay(50);  
-   
+   //speed control
  }
  
 
