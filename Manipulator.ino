@@ -28,19 +28,30 @@ void setup() {
 
 //Pin Assignment
 
-  servo1.attach(5);   
-  servo2.attach(6);  
-  servo3.attach(7);  
+     
+  delay(500);
+  servo2.attach(6); 
+  delay(500); 
+  servo3.attach(7);
+  delay(500);  
+  servo1.attach(5);
+  delay(500);
   servo4.attach(8);  
+  delay(500);
   servo5.attach(9);  
+  delay(500);
   
 //Robot Position Reset
 
-  servo1.write(90);   
-  servo2.write(90);   
-  servo3.write(90);   
-  servo4.write(90);   
-  servo5.write(60);   
+//  servo1.write(60); 
+//  delay(500);  
+//  servo2.write(80);  
+//  delay(500); 
+//  servo3.write(90);   
+//  delay(500);
+//  servo4.write(90);  
+//  delay(500); 
+//  servo5.write(60);   
   
  } 
 }
@@ -53,7 +64,7 @@ void loop()
   delay(5000);
 
   //Picking Inititation
-  for (pos1 = servo1.read(); pos1 <= 140; pos1 += 1)
+  for (pos1 = servo1.read(); pos1 <= 120; pos1 += 1)
   
   { 
     servo1.write(pos1);              
@@ -62,14 +73,14 @@ void loop()
   
 
 
-  for (pos2 = servo2.read(); pos2 >= 84; pos2 -= 1) { 
+  for (pos2 = servo2.read(); pos2 >= 70; pos2 -= 1) { 
     servo2.write(pos2);              
     delay(50);  
    //speed control
  }
  
 
-for (pos4 = servo4.read(); pos4 >= 50; pos4 -= 1)
+  for (pos4 = servo4.read(); pos4 >= 50; pos4 -= 1)
   
   { 
     servo4.write(pos4);              
@@ -89,7 +100,7 @@ for (pos4 = servo4.read(); pos4 >= 50; pos4 -= 1)
     servo5.write(pos);              
       delay(50);  }
 
-      for (pos = servo5.read(); pos <= 100; pos += 1) 
+      for (pos = servo5.read(); pos <= 120; pos += 1) 
   { 
     servo5.write(pos);              
       delay(50);  }
@@ -103,7 +114,7 @@ for (pos4 = servo4.read(); pos4 >= 50; pos4 -= 1)
     delay(50);  
   }
 
-   for (pos1 = servo1.read(); pos1 >= 90; pos1 -= 1)
+   for (pos1 = servo1.read(); pos1 >= 20; pos1 -= 1)
   
   { 
     servo1.write(pos1);              
@@ -131,6 +142,5 @@ for (pos4 = servo4.read(); pos4 >= 50; pos4 -= 1)
   
     delay(5000);  //Waiting time to begin again
     
-    break
     
 }
